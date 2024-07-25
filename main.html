@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Road Runner Speed Predictor</title>
+    <style>
+        /* Your existing CSS for the speed predictor form */
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url("https://www.wallpaperup.com/uploads/wallpapers/2013/10/16/161114/f48a9d798af2c5f2348c078b3a8809ce-700.jpg");
+            background-size: cover;
+        }
+        
+        h1 {
+            text-align: center;
+            font-family: roboto;
+            font-size: 60px;
+            font-weight: bold;
+            color: #fff;
+            padding: 20px 0;
+        }
+        
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: transparent;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            animation: slide-in 0.5s ease-in-out;
+            color: #150d0d;
+            font-size: 30px;
+            font-family: roboto;
+        }
+        
+        label {
+            font-weight: bold;
+        }
+        
+        input[type="number"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        
+        h1 {
+            text-align: center;
+            font-family: roboto;
+            font-size: 60px;
+            font-weight: bold;
+            color: #fff;
+            padding: 20px 0;
+            text-shadow: 0 0 10px rgba(0, 0, 255, 0.8), 0 0 20px rgba(0, 0, 255, 0.8), 0 0 30px rgba(0, 0, 255, 0.8);
+        }
+        
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: transparent;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            animation: slide-in 0.5s ease-in-out;
+            color: #faf0f0;
+            font-size: 20px;
+            font-family: roboto;
+        }
+        
+        input[type="submit"] {
+            background-color: #0074d9;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        /* Define the slide-in animation */
+        
+        @keyframes slide-in {
+            0% {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>ROADRUNNER SPEED PREDICTOR</h1>
+    <form method="POST" action="/">
+        <!-- <h1>Road Runner Speed Predictor</h1>
+        <label for="distance">Distance (in miles):</label>
+        <input type="number" id="distance" name="distance" required><br>
+
+        <label for="terrain">Terrain:</label>
+        <select id="terrain" name="terrain" required>
+            <option value="">Select Terrain</option>
+            <option value="flat">Flat</option>
+            <option value="hilly">Hilly</option>
+            <option value="mountainous">Mountainous</option>
+        </select><br>
+        <!DOCTYPE html> -->
+        <!-- <html> -->
+
+        <label for="distance">Distance (in miles):</label>
+        <input type="number" step="0.01" name="distance" required><br><br>
+
+        <label for="terrain">Terrain (1 for flat, 2 for hilly, 3 for mountainous):</label>
+        <input type="number" name="terrain" min="1" max="3" required><br><br>
+
+        <label for="weather_conditions">Weather Conditions (1 for clear, 2 for rainy, 3 for snowy):</label>
+        <input type="number" name="weather_conditions" min="1" max="3" required><br><br>
+
+        <input type="submit" value="Predict Speed">
+    </form>
+</body>
+
+</html>
+
+
+<!-- <label for="weather_conditions">weather_conditions:</label>
+        <select id="weather_conditions" name="weather_conditions" required>
+            <option value="">Select Weather Condition</option>
+            <option value="clear">Clear</option>
+            <option value="rainy">Rainy</option>
+            <option value="snowy">Snowy</option>
+        </select><br>
+
+        <input type="submit" value="Predict Speed">
+    </form>
+</body>
+
+</html> -->

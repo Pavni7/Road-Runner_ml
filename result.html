@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Road Runner Animation</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            /* To prevent scrollbars */
+        }
+        
+        .container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+        }
+        
+        #roadRunnerAnimation {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 1750px;
+            height: 200px;
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBqWnC6l5wsH5XjkKQ_GgCPoSvjEQ2YB-cdQ&usqp=CAU");
+            /* Replace with your sprite image */
+            background-position: 0 0;
+            /* Adjust as needed for your sprite */
+        }
+    </style>
+</head>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        /* To prevent scrollbars */
+        background-color: rgb(105, 180, 233);
+    }
+    
+    .container {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+    }
+    
+    #roadRunnerAnimation {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 1750px;
+        height: 300px;
+        background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBqWnC6l5wsH5XjkKQ_GgCPoSvjEQ2YB-cdQ&usqp=CAU");
+        /* Replace with your sprite image */
+        background-position: 0 0;
+        /* Adjust as needed for your sprite */
+        animation: run 1s steps(3) infinite;
+        /* Moved animation property here */
+    }
+    /* Add styles for the "RESULT" and "Predicted Speed" elements */
+    
+    h1 {
+        text-align: center;
+        font-size: 36px;
+        color: white;
+        padding-top: 20px;
+    }
+    
+    h2 {
+        text-align: center;
+        font-size: 24px;
+        color: white;
+        margin-top: 20px;
+    }
+    
+    p {
+        text-align: center;
+        font-size: 18px;
+        color: white;
+    }
+</style>
+</head>
+
+<body>
+    <h1>RESULT</h1>
+    <div class="container1">
+        <div id="roadRunnerAnimation1"></div>
+    </div>
+    <div>
+        <h2>Predicted Speed:</h2>
+        <p>{{ predicted_speed }}</p>
+    </div>
+
+    <div class="container">
+        <div id="roadRunnerAnimation"></div>
+    </div>
+
+    <script>
+        // Define the CSS animation keyframes
+        const styleSheet = document.styleSheets[0];
+        styleSheet.insertRule(
+            "@keyframes run { from { background-position: 0 0; } to { background-position: -1600px 0; } }",
+            0
+        );
+    </script>
+</body>
+
+</html>
